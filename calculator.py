@@ -5,6 +5,8 @@ pip install numpy
 pip install statistics
 """
 
+######### CALCULATOR
+
 import numpy as np
 import statistics as st
 
@@ -206,10 +208,14 @@ def statistics():
 
 
 def polynomial():
-    a = list(map(int, input('Enter space-seperated coefficients of the polynomial: ').split()))
-    r = np.roots(a)
-    for i in range(len(r)):
-        print('x%d: %.2f' % (i + 1, r[i]))
+    a = list(map(int, input('Enter space-separated coefficients of the polynomial: ').split()))
+
+    try:
+        r = np.roots(a)
+        for i in range(len(r)):
+            print('x%d: %.2f' % (i + 1, r[i]))
+    except:
+        print('Invalid coefficients!')
 
     return True
 
