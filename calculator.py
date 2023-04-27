@@ -3,14 +3,15 @@
 """
 pip install numpy
 pip install statistics
+
 """
 
-######### CALCULATOR
-
+# import required libraries
 import numpy as np
 import statistics as st
 
 
+# function to display the header of the calculator menu
 def head():
     # header
     for i in range(40):
@@ -35,6 +36,7 @@ def head():
         print('-', end='')
 
 
+# Function to evaluate arithmetic expressions
 def calculate():
     exp = input('Enter an expression (+, -, *, /, ^): ')
     exp = exp.replace('^', '**')
@@ -47,6 +49,7 @@ def calculate():
     return True
 
 
+# Function to convert a number between different number bases
 def baseN():
     bases = {1: 2, 2: 8, 3: 10, 4: 16}
     print('''1. Binary
@@ -85,6 +88,7 @@ def baseN():
     return True
 
 
+# Function to perform matrix operations
 def matrices():
     # matrices
     r1, c1 = map(int, input('Enter space-separated rows and columns of first matrix: ').split())
@@ -172,8 +176,9 @@ def matrices():
             print('Invalid Input! Try Again.')
 
 
+# Function to perform statistical operations
 def statistics():
-    a = list(map(int, input('Enter space-seperated numbers: ').split()))
+    a = list(map(int, input('Enter space-separated numbers: ').split()))
     print()
     print('''1. Mean
 2. Mode
@@ -207,6 +212,7 @@ def statistics():
             print('Invalid Input! Try Again.')
 
 
+# Function to calculate roots of the polynomial
 def polynomial():
     a = list(map(int, input('Enter space-separated coefficients of the polynomial: ').split()))
 
@@ -220,6 +226,7 @@ def polynomial():
     return True
 
 
+# Function to calculate the values of unknowns of simul equations
 def simul():
     l = ['x', 'y', 'z']
     n = int(input('Number of unknowns[1-3]?: '))
@@ -242,6 +249,7 @@ def simul():
     return True
 
 
+# function to display the footer of the calculator menu
 def foot():
     for i in range(40):
         print('-', end='')
@@ -251,6 +259,7 @@ def foot():
         print('-', end='')
 
 
+# main 
 def main():
     while True:
         print()
@@ -301,6 +310,6 @@ def main():
             print('Invalid Input! Try Again.')
 
 
-# main
+# program execution starts here
 if __name__ == '__main__':
     main()
